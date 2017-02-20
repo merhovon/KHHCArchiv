@@ -35,7 +35,7 @@
                   <Image url="@../../Bilder/11391245_942661822431840_7941040152101127965_n.jpg" />
                </image>
             </ImageView>
-            <DatePicker fx:id="datePicker" layoutX="825.0" layoutY="170.0" prefWidth="200.0" />
+            <DatePicker fx:id="datePicker" editable="false" layoutX="825.0" layoutY="170.0" prefWidth="200.0" showWeekNumbers="true" />
             <Label fx:id="labelDate" layoutX="731.0" layoutY="174.0" text="Datum:" />
             <ChoiceBox fx:id="listKeywordOne" layoutX="825.0" layoutY="225.0" prefHeight="35.0" prefWidth="200.0" />
             <Label fx:id="labelKeywordOne" layoutX="731.0" layoutY="234.0" text="Schlüsselwort 1" />
