@@ -28,7 +28,7 @@ public class Main extends Application {
 			Scene scene = new Scene(pane);
 			primarayStage.setScene(scene);
 			primarayStage.show();
-			MainWindowController mainWindowController = loader.getController();
+			MainWindowController_old mainWindowController = loader.getController();
 			mainWindowController.setMain(this);
 		} catch (IOException e) {
 			// TODO Automatisch generierter Erfassungsblock
