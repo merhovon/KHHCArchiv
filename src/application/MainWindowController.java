@@ -30,11 +30,11 @@ public class MainWindowController {
 	@FXML private Label labelKeywordThree;
 	@FXML private Label labelKeywordFour;
 	@FXML private Label labelKeywordFive;
-	@FXML private ChoiceBox listKeywordOne;
-	@FXML private ChoiceBox listKeywordTwo;
-	@FXML private ChoiceBox listKeywordThree;
-	@FXML private ChoiceBox listKeywordFour;
-	@FXML private ChoiceBox listKeywordFive;
+	@FXML private ChoiceBox<String> listKeywordOne;
+	@FXML private ChoiceBox<String> listKeywordTwo;
+	@FXML private ChoiceBox<String> listKeywordThree;
+	@FXML private ChoiceBox<String> listKeywordFour;
+	@FXML private ChoiceBox<String> listKeywordFive;
 	@FXML private ImageView imageActualDoc;
 	@FXML private DatePicker datePicker;
 

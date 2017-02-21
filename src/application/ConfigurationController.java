@@ -18,7 +18,7 @@ public class ConfigurationController {
 	@FXML private Label labelStoreType;
 	@FXML private Label labelScannerChoice;
 	
-	@FXML private ChoiceBox listScanner;
+	@FXML private ChoiceBox<String> listScanner;
 	
 	@FXML private RadioButton radioButtonStoreManual;
 	@FXML private RadioButton radioButtonStoreAuto;
