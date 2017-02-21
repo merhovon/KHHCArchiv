@@ -3,6 +3,7 @@ package application;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -30,11 +31,11 @@ public class MainWindowController {
 	@FXML private Label labelKeywordThree;
 	@FXML private Label labelKeywordFour;
 	@FXML private Label labelKeywordFive;
-	@FXML private ChoiceBox<String> listKeywordOne;
-	@FXML private ChoiceBox<String> listKeywordTwo;
-	@FXML private ChoiceBox<String> listKeywordThree;
-	@FXML private ChoiceBox<String> listKeywordFour;
-	@FXML private ChoiceBox<String> listKeywordFive;
+	@FXML private ComboBox<String> listKeywordOne;
+	@FXML private ComboBox<String> listKeywordTwo;
+	@FXML private ComboBox<String> listKeywordThree;
+	@FXML private ComboBox<String> listKeywordFour;
+	@FXML private ComboBox<String> listKeywordFive;
 	@FXML private ImageView imageActualDoc;
 	@FXML private DatePicker datePicker;
 
