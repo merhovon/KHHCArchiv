@@ -42,5 +42,9 @@ public class MainWindowController {
 	@FXML private ImageView imageActualDoc;
 	
 	@FXML private DatePicker datePicker;
+	
+	public void setMain(Main main) {
+				this.main = main;
+			}
 
 }
