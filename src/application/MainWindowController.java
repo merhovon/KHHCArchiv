@@ -46,5 +46,13 @@ public class MainWindowController {
 	public void setMain(Main main) {
 				this.main = main;
 			}
+	public void stopProgram(){
+		/**
+		 * KK 170222 
+		 * Programm soll beendet werden 
+		 * Aufräumen nötig? exit ist so hart ;)
+		 */
+		System.exit(0);
+	}
 
 }

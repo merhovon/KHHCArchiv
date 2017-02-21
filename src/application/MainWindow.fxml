@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.12673130193905818" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1446.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+<SplitPane dividerPositions="0.12673130193905818" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1446.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
   <items>
     <AnchorPane fx:id="anchorMenu" minHeight="0.0" minWidth="0.0" prefHeight="634.0" prefWidth="0.0">
          <children>
             <Button fx:id="manualStore" layoutX="15.0" layoutY="25.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Manuelle Ablage" textAlignment="JUSTIFY" />
             <Button fx:id="autoStore" layoutX="15.0" layoutY="90.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Autom. Ablage" textFill="#00000050" />
             <Button fx:id="config" layoutX="15.0" layoutY="760.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Einstellungen" />
-            <Button fx:id="stop" layoutX="15.0" layoutY="825.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Beenden" />
+            <Button fx:id="stop" layoutX="15.0" layoutY="825.0" mnemonicParsing="false" onAction="#stopProgram" prefHeight="40.0" prefWidth="150.0" text="Beenden" />
             <Button fx:id="search" layoutX="15.0" layoutY="155.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Suchen" />
          </children></AnchorPane>
     <AnchorPane fx:id="anchorMain" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
