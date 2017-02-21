@@ -8,36 +8,42 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1446.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1446.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SearchWindowController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <DatePicker layoutX="97.0" layoutY="64.0" prefWidth="200.0" />
+            <DatePicker fx:id="dateFrom" layoutX="97.0" layoutY="64.0" prefWidth="200.0" />
             <Label layoutX="37.0" layoutY="68.0" text="Datum ab:" />
-            <ChoiceBox layoutX="348.0" layoutY="353.0" prefHeight="35.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="listSearchKeywordFour" layoutX="348.0" layoutY="353.0" prefHeight="35.0" prefWidth="200.0" />
             <Label layoutX="170.0" layoutY="137.0" text="Schlüsselwort 1:" />
-            <ChoiceBox layoutX="348.0" layoutY="428.0" prefHeight="35.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="listSearchKeywordFive" layoutX="348.0" layoutY="428.0" prefHeight="35.0" prefWidth="200.0" />
             <Label layoutX="170.0" layoutY="212.0" text="Schlüsselwort 2:" />
-            <ChoiceBox layoutX="350.0" layoutY="128.0" prefHeight="35.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="listSearchKeywordOne" layoutX="350.0" layoutY="128.0" prefHeight="35.0" prefWidth="200.0" />
             <Label layoutX="170.0" layoutY="287.0" text="Schlüsselwort 3:" />
-            <ChoiceBox layoutX="348.0" layoutY="203.0" prefHeight="35.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="listSearchKeywordTwo" layoutX="348.0" layoutY="203.0" prefHeight="35.0" prefWidth="200.0" />
             <Label layoutX="170.0" layoutY="367.0" text="Schlüsselwort 4:" />
-            <ChoiceBox layoutX="348.0" layoutY="278.0" prefHeight="35.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="listSearchKeywordThree" layoutX="348.0" layoutY="278.0" prefHeight="35.0" prefWidth="200.0" />
             <Label layoutX="170.0" layoutY="437.0" text="Schlüsselwort 5:" />
-            <DatePicker layoutX="483.0" layoutY="64.0" prefWidth="200.0" />
+            <DatePicker fx:id="dateTill" layoutX="483.0" layoutY="64.0" prefWidth="200.0" />
             <Label layoutX="421.0" layoutY="68.0" text="Datum bis:" />
-            <ListView layoutX="212.0" layoutY="574.0" prefHeight="274.0" prefWidth="382.0" />
-            <Button layoutX="285.0" layoutY="504.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Suchen" />
+            <ListView fx:id="listResult" layoutX="212.0" layoutY="574.0" prefHeight="274.0" prefWidth="382.0" />
+            <Button fx:id="buttonSearch" layoutX="285.0" layoutY="504.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Suchen" />
             <Label layoutX="125.0" layoutY="574.0" text="Ergebnis:" />
+            <Label layoutX="306.0" layoutY="21.0" text="Suchkriterien:">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <ImageView fitHeight="744.0" fitWidth="552.0" layoutX="84.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-            <Button layoutX="100.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom +" />
-            <Button layoutX="200.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom -" />
-            <Button layoutX="460.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Drucken" />
-            <Button layoutX="560.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Senden" />
+            <ImageView fx:id="choosenDoc" fitHeight="744.0" fitWidth="552.0" layoutX="84.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="zoomPlus" layoutX="100.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom +" />
+            <Button fx:id="zoomMinus" layoutX="200.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom -" />
+            <Button fx:id="print" layoutX="460.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Drucken" />
+            <Button fx:id="send" layoutX="560.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Senden" />
          </children></AnchorPane>
   </items>
 </SplitPane>
