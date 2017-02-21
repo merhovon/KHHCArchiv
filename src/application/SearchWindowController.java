@@ -14,6 +14,7 @@ public class SearchWindowController {
 	@FXML private Button zoomMinus;
 	@FXML private Button print;
 	@FXML private Button send;
+	@FXML private Button searchClose;
 	
 	@FXML private ChoiceBox<String> listSearchKeywordOne;
 	@FXML private ChoiceBox<String> listSearchKeywordTwo;

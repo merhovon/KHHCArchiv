@@ -42,8 +42,9 @@
             <ImageView fx:id="choosenDoc" fitHeight="744.0" fitWidth="552.0" layoutX="84.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
             <Button fx:id="zoomPlus" layoutX="100.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom +" />
             <Button fx:id="zoomMinus" layoutX="200.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom -" />
-            <Button fx:id="print" layoutX="460.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Drucken" />
-            <Button fx:id="send" layoutX="560.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Senden" />
+            <Button fx:id="print" layoutX="411.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Drucken" />
+            <Button fx:id="send" layoutX="482.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Senden" />
+            <Button fx:id="searchClose" layoutX="553.0" layoutY="820.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Schlißen" />
          </children></AnchorPane>
   </items>
 </SplitPane>
