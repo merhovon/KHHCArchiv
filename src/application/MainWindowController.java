@@ -1,5 +1,10 @@
 package application;
-
+/**
+ * KK170222
+ * In der Controllerklasse passiert die ganze Action der Seite
+ * Jede Seite hat ihre eigene Controllerklasse
+ */
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -11,7 +16,11 @@ import javafx.scene.layout.AnchorPane;
 public class MainWindowController {
 	
 	public Main main;
-	
+	/**
+	 * KK 170222
+	 * hier müssen nur die Elemente, der Seite rein auf die programmtechnisch zu
+	 * gegriffen wird, also zum Schluß "putzen"
+	 */
 	@FXML private AnchorPane anchorMenu;
 	@FXML private AnchorPane anchorMain;
 	
@@ -49,10 +58,18 @@ public class MainWindowController {
 	public void stopProgram(){
 		/**
 		 * KK 170222 
-		 * Programm soll beendet werden 
-		 * Aufräumen nötig? exit ist so hart ;)
+		 * Programm wird beendet 
+		 * Lifecycle einer fx-Anwendung ist: init - start - (warten auf Platform.exit)
+		 * - stop  
+		 * init und stop sind in Application bereits codiert (leer) und müssen nicht 
+		 * überschrieben werden
+		 * start muss auscodiert werden
+		 * Platform.exit() erlaubt noch das Aufrufen von stop
+		 * System.exit() wäre eine Alternative !!es gibt dann aber keine Change auf 
+		 * das Aufrufen von stop()!!
+		 * 
 		 */
-		System.exit(0);
+		Platform.exit();
 	}
 
 }
