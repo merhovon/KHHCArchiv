@@ -134,7 +134,8 @@ public class MainWindowController {
 			try {
 				Image myImage = new Image(myFile.toURI().toURL().toExternalForm(),500.0,650.0,false, true);
 				System.out.println(myImage.heightProperty());
-				main.getPrimarayStage().show();
+				imageActualDoc.setImage(myImage);
+				//main.getPrimarayStage().show();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
