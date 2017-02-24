@@ -53,8 +53,8 @@
                </font>
             </Label>
             <Button fx:id="save" layoutX="850.0" layoutY="645.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Speichern" />
-            <Button fx:id="searchDoc" layoutX="278.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Durchsuchen..." />
-            <Label fx:id="labelPath" layoutX="130.0" layoutY="126.0" prefHeight="25.0" prefWidth="273.0" text="Pfad des aktuellen Dukuments" textFill="#0000003f" />
+            <Button fx:id="searchDoc" layoutX="278.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleSearchDoc" prefHeight="25.0" prefWidth="124.0" text="Durchsuchen..." />
+            <Label fx:id="labelPath" layoutX="130.0" layoutY="126.0" prefHeight="25.0" prefWidth="273.0" text="Pfad des aktuellen Dukuments" />
             <ComboBox fx:id="listKeywordOne" editable="true" layoutX="872.0" layoutY="249.0" prefHeight="35.0" prefWidth="200.0" />
             <ComboBox fx:id="listKeywordTwo" editable="true" layoutX="872.0" layoutY="319.0" prefHeight="35.0" prefWidth="200.0" />
             <ComboBox fx:id="listKeywordThree" editable="true" layoutX="872.0" layoutY="389.0" prefHeight="35.0" prefWidth="200.0" />

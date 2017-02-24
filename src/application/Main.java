@@ -14,6 +14,9 @@ public class Main extends Application {
 	
 	private Stage primarayStage; //ist das klassische "Fenster" unsere Bühne
 	
+	public Stage getPrimarayStage(){
+		return primarayStage;
+	}
 	@Override
 	public void start(Stage primaryStage) {
 		this.primarayStage = primaryStage;
