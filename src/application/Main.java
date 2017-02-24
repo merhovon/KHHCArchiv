@@ -40,13 +40,13 @@ public class Main extends Application {
 			//kopplung des Fensters (Bühne) mit der Szene
 			primarayStage.setScene(scene);
 			//der Vorgang geht auf
-			primarayStage.show();
+			
 			
 			//und hier steht das Drehbuch
 			MainWindowController mainWindowController = loader.getController();
 			//dem Drehbuch mitteilen zu welchem St�ck es gehört
 			mainWindowController.setMain(this);
-			
+			primarayStage.show();
 		} catch (IOException e) {
 			// TODO Automatisch generierter Erfassungsblock
 			e.printStackTrace();
