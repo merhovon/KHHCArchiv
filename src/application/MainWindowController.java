@@ -1,11 +1,6 @@
 package application;
 
 import java.io.File;
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.imageio.ImageIO;
 
 /**
  * KK170222
@@ -23,8 +18,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
-import javafx.stage.Stage;
-import sun.misc.ExtensionInfo;
 
 public class MainWindowController {
 
@@ -101,7 +94,7 @@ public class MainWindowController {
 		 * werden start muss auscodiert werden Platform.exit() erlaubt noch das
 		 * Aufrufen von stop System.exit() wäre eine Alternative !!es gibt dann
 		 * aber keine Möglichkeit auf das Aufrufen von stop()!!
-		 * 
+		 *
 		 */
 		Platform.exit();
 	}
@@ -133,7 +126,7 @@ public class MainWindowController {
 			// Path-angaben ausgeben
 			labelPath.setText(myFile.getPath());
 			labelPath.setVisible(true);
-			
+
 			// Image anzeigen - hier bockt es noch
 //			System.out.println(myFile.toURI());
 //			System.out.println(myFile.toURI().toURL());
@@ -145,7 +138,7 @@ public class MainWindowController {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			
+
 			// imageActualDoc.setImage(new Image(myFile.getAbsolutePath()));
 			// imageActualDoc.setVisible(true);
 			// neImage =imageActualDoc.getImage();
