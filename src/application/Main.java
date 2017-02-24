@@ -12,7 +12,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class Main extends Application {
 	
-	private Stage primarayStage; //ist das klassische "Fenster" unsere Bühne
+	private Stage primarayStage; //ist das klassische "Fenster" unsere BÃ¼hne
 	
 	public Stage getPrimarayStage(){
 		return primarayStage;
@@ -26,10 +26,10 @@ public class Main extends Application {
 	public void mainWindow(){		
 		try {
 			FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindow.fxml"));
-			//es muss hier der äußerste Container geladen werden hier SplitPane
+			//es muss hier der Ã¤uÃŸerste Container geladen werden hier SplitPane
 			SplitPane pane = loader.load(); //der Container in dem alle Elemente liegen
 			
-			//Standardgröße des Fensters - kann hier  raus
+			//StandardgrÃ¶ÃŸe des Fensters - kann hier  raus
 			//da die Werte in der fxml festgelegt sind
 			primarayStage.setMinHeight(600.00); 
 			primarayStage.setMinWidth(1400.00);
@@ -37,14 +37,14 @@ public class Main extends Application {
 			//Was wird hier gespielt - die erste Szene = das Fenster im Urzustand
 			Scene scene = new Scene(pane);
 			
-			//kopplung des Fensters (Bühne) mit der Szene
+			//kopplung des Fensters (BÃ¼hne) mit der Szene
 			primarayStage.setScene(scene);
 			//der Vorgang geht auf
 			primarayStage.show();
 			
 			//und hier steht das Drehbuch
 			MainWindowController mainWindowController = loader.getController();
-			//dem Drehbuch mitteilen zu welchem Stück es gehört
+			//dem Drehbuch mitteilen zu welchem Stï¿½ck es gehÃ¶rt
 			mainWindowController.setMain(this);
 			
 		} catch (IOException e) {

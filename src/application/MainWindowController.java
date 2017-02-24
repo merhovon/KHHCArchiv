@@ -97,7 +97,7 @@ public class MainWindowController {
 		FileChooser fileChooser = new FileChooser();
 		//grundkonfiguration
 		fileChooser.setTitle("Bitte gewünschte Datei auswählen");
-		fileChooser.setInitialDirectory(sourceDir);
+		//fileChooser.setInitialDirectory(sourceDir);
 		fileChooser.getExtensionFilters().addAll(
 		         new ExtensionFilter("Text Files", "*.txt", "*.pdf"),
 		         new ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"),
