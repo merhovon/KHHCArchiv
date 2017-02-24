@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="libs/rt.jar"/>
 	<classpathentry kind="lib" path="libs/jfxrt.jar"/>
-	<classpathentry kind="lib" path="/home/chrisbee/git/KHHCArchiv/libs/sqlite-jdbc.jar"/>
+	<classpathentry kind="lib" path="libs/sqlite-jdbc.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
