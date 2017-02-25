@@ -153,6 +153,68 @@ public class MainWindowController_new {
 	public void setMain(Main main) {
 		this.main = main;
 	}
-
 	
+	public void stopProgram() {
+		/**
+		 * KK 170222 Programm wird beendet Lifecycle einer fx-Anwendung ist:
+		 * init - start - (warten auf Platform.exit) - stop init und stop sind
+		 * in Application bereits codiert (leer) und müssen nicht überschrieben
+		 * werden start muss auscodiert werden Platform.exit() erlaubt noch das
+		 * Aufrufen von stop System.exit() wäre eine Alternative !!es gibt dann
+		 * aber keine Möglichkeit auf das Aufrufen von stop()!!
+		 *
+		 */
+		Platform.exit();
+	}
+	
+	@FXML
+	public void handleSearchDoc() {
+		/**
+		 * Kk 170223 KK, CB 170224 Dialog zur Dateiauswahl aufrufen *erledigt
+		 * Dateiname im Label anzeigen *erledigt ausgewählte Datei im Image
+		 * anzeigen
+		 */
+		// noch fest codiert, wenn wir eine Datenbankanbindung haben sollte
+		// hier der Wert von config.rootDir
+		File sourceDir = new File("C:/Users/Kerstin/desktop");
+		// vordefinierte Klasse zur Dateiauswahl
+		FileChooser fileChooser = new FileChooser();
+		// grundkonfiguration
+		fileChooser.setTitle("Bitte gewünschte Datei auswählen");
+		// fileChooser.setInitialDirectory(sourceDir);
+		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"),
+				new ExtensionFilter("Text Files", "*.txt", "*.pdf"), new ExtensionFilter("All Files", "*.*"));
+
+		// das wird unsere Datei
+		File myFile;
+		// file wird gelesen
+		// myFile=fileChooser.showOpenDialog(main.getPrimarayStage());
+		myFile = fileChooser.showOpenDialog(labelPath.getScene().getWindow());
+		if (myFile != null) {
+			// Path-angaben ausgeben
+			labelPath.setText(myFile.getPath());
+			labelPath.setVisible(true);
+
+			// Image anzeigen - hier bockt es noch
+//			System.out.println(myFile.toURI());
+//			System.out.println(myFile.toURI().toURL());
+//			System.out.println(myFile.toURI().toURL().toString());
+			try {
+				Image myImage = new Image(myFile.toURI().toURL().toExternalForm(),500.0,650.0,false, true);
+				System.out.println(myImage.heightProperty());
+				imageActualDoc.setImage(myImage);
+				//main.getPrimarayStage().show();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			// imageActualDoc.setImage(new Image(myFile.getAbsolutePath()));
+			// imageActualDoc.setVisible(true);
+			// neImage =imageActualDoc.getImage();
+			// labelPath.setText(" "+ neImage.getWidth());
+
+		}
+		
+	}
+
 }
