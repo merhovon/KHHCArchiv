@@ -28,7 +28,7 @@
             <Font name="Arial Black" size="24.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="abchorManual" layoutX="173.0" layoutY="72.0" prefHeight="696.0" prefWidth="1107.0">
+      <AnchorPane fx:id="anchorManual" layoutX="173.0" layoutY="72.0" prefHeight="696.0" prefWidth="1107.0">
          <children>
             <Separator layoutX="551.0" layoutY="46.0" orientation="VERTICAL" prefHeight="647.0" prefWidth="6.0" />
             <ImageView fx:id="imageActualDoc" fitHeight="570.0" fitWidth="402.0" layoutX="68.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
