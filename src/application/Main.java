@@ -27,7 +27,7 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindow.fxml"));
 			//es muss hier der äußerste Container geladen werden hier SplitPane
-			SplitPane pane = loader.load(); //der Container in dem alle Elemente liegen
+			AnchorPane pane = loader.load(); //der Container in dem alle Elemente liegen
 			
 			//Standardgröße des Fensters - kann hier  raus
 			//da die Werte in der fxml festgelegt sind
