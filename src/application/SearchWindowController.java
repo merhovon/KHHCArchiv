@@ -9,24 +9,46 @@ import javafx.scene.image.ImageView;
 
 public class SearchWindowController {
 	
-	@FXML private Button buttonSearch;
-	@FXML private Button zoomPlus;
-	@FXML private Button zoomMinus;
-	@FXML private Button print;
-	@FXML private Button send;
-	@FXML private Button searchClose;
-	
-	@FXML private ChoiceBox<String> listSearchKeywordOne;
-	@FXML private ChoiceBox<String> listSearchKeywordTwo;
-	@FXML private ChoiceBox<String> listSearchKeywordThree;
-	@FXML private ChoiceBox<String> listSearchKeywordFour;
-	@FXML private ChoiceBox<String> listSearchKeywordFive;
-	
-	@FXML private ListView<String> listResult;
-	
-	@FXML private ImageView choosenDoc;
-	
-	@FXML private DatePicker dateFrom;
-	@FXML private DatePicker dateTill;
+	@FXML
+    private DatePicker dateFrom;
+
+    @FXML
+    private DatePicker dateTill;
+
+    @FXML
+    private ChoiceBox<String> listSearchKeywordOne;
+
+    @FXML
+    private ChoiceBox<String> listSearchKeywordTwo;
+
+    @FXML
+    private ChoiceBox<String> listSearchKeywordThree;
+
+    @FXML
+    private ChoiceBox<String> listSearchKeywordFour;
+
+    @FXML
+    private ChoiceBox<String> listSearchKeywordFive;
+
+    @FXML
+    private Button buttonSearch;
+
+    @FXML
+    private ListView<String> listResult;
+
+    @FXML
+    private Button zoomPlus;
+
+    @FXML
+    private Button zoomMinus;
+
+    @FXML
+    private Button print;
+
+    @FXML
+    private Button send;
+
+    @FXML
+    private ImageView choosenDoc;
 
 }
