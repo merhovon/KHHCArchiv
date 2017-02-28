@@ -7,6 +7,7 @@ import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 public class MainWindowController {
@@ -42,6 +43,8 @@ public class MainWindowController {
     private void handleManualButtonAction(ActionEvent event) throws IOException {
     	
     	manualStore.setDisable(true);
+//    	AnchorPane pane = FXMLLoader.load(getClass().getResource("ManualWindowfxml"));
+//    	anchorDetails.getChildren().setAll(pane);
 
     }
 	
