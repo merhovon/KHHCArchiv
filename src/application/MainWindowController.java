@@ -1,8 +1,9 @@
 package application;
 
+import com.jfoenix.controls.JFXButton;
+
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 public class MainWindowController {
@@ -13,19 +14,19 @@ public class MainWindowController {
     private AnchorPane anchorMain;
 
     @FXML
-    private Button manualStore;
+    private JFXButton manualStore;
 
     @FXML
-    private Button autoStore;
+    private JFXButton autoStore;
 
     @FXML
-    private Button config;
+    private JFXButton search;
 
     @FXML
-    private Button stop;
+    private JFXButton config;
 
     @FXML
-    private Button search;
+    private JFXButton stop;
 
     @FXML
     private AnchorPane anchorDetails;
