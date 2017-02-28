@@ -9,10 +9,16 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 
 public class ManualWindowController {
+
+	public Main main;
+	
+	@FXML
+    private AnchorPane anchorMain;
 	
 	@FXML
     private Label labelActualDoc;

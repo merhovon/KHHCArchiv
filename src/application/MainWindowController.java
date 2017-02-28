@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import com.jfoenix.controls.JFXButton;
 
 import javafx.application.Platform;
@@ -12,7 +14,7 @@ public class MainWindowController {
 	public Main main;
 	
 	@FXML
-    private AnchorPane anchorMain;
+    private AnchorPane anchorMainMain;
 
     @FXML
     private JFXButton manualStore;
@@ -37,7 +39,7 @@ public class MainWindowController {
 	}
     
     @FXML
-    void handleManualButtonAction(ActionEvent event) {
+    private void handleManualButtonAction(ActionEvent event) throws IOException {
     	
     	manualStore.setDisable(true);
 
