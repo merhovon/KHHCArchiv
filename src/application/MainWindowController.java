@@ -3,6 +3,7 @@ package application;
 import com.jfoenix.controls.JFXButton;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 
@@ -34,6 +35,13 @@ public class MainWindowController {
     public void setMain(Main main) {
 		this.main = main;
 	}
+    
+    @FXML
+    void handleManualButtonAction(ActionEvent event) {
+    	
+    	manualStore.setDisable(true);
+
+    }
 	
 	public void stopProgram() {
 		/**
