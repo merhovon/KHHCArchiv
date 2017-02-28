@@ -50,5 +50,9 @@ public class SearchWindowController {
 
     @FXML
     private ImageView choosenDoc;
+    
+
+    @FXML
+    private Button newStore;
 
 }

@@ -8,6 +8,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 public class MainWindowController {
@@ -35,6 +36,9 @@ public class MainWindowController {
     @FXML
     private AnchorPane anchorDetails;
     
+    @FXML
+    private Label labelHeadline;
+    
     public void setMain(Main main) {
 		this.main = main;
 	}
@@ -43,12 +47,37 @@ public class MainWindowController {
     private void handleManualButtonAction(ActionEvent event) throws IOException {
     	
     	manualStore.setDisable(true);
-//    	AnchorPane pane = FXMLLoader.load(getClass().getResource("ManualWindowfxml"));
-//    	anchorDetails.getChildren().setAll(pane);
+    	search.setDisable(false);
+    	config.setDisable(false);
+    	AnchorPane pane = FXMLLoader.load(getClass().getResource("ManualWindow.fxml"));
+    	anchorDetails.getChildren().setAll(pane);
 
     }
-	
-	public void stopProgram() {
+    
+    @FXML
+    void handleSearchButton(ActionEvent event) throws IOException {
+    	
+    	manualStore.setDisable(false);
+    	search.setDisable(true);
+    	config.setDisable(false);
+    	AnchorPane pane = FXMLLoader.load(getClass().getResource("SearchWindow.fxml"));
+    	anchorDetails.getChildren().setAll(pane);
+    	
+    }
+    
+    @FXML
+    void handleConfigButtonAction(ActionEvent event) throws IOException {
+    	
+    	manualStore.setDisable(false);
+    	search.setDisable(false);
+    	config.setDisable(true);
+    	AnchorPane pane = FXMLLoader.load(getClass().getResource("ConfigWindow.fxml"));
+    	anchorDetails.getChildren().setAll(pane);
+
+    }
+    
+    @FXML
+    public void stopProgram() {
 		/**
 		 * KK 170222 Programm wird beendet Lifecycle einer fx-Anwendung ist:
 		 * init - start - (warten auf Platform.exit) - stop init und stop sind
