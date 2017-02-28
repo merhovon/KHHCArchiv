@@ -41,6 +41,7 @@ public class MainWindowController {
     
     public void setMain(Main main) {
 		this.main = main;
+		labelHeadline.setText("Archivierung (Version 1.0)");
 	}
     
     @FXML
@@ -51,6 +52,7 @@ public class MainWindowController {
     	config.setDisable(false);
     	AnchorPane pane = FXMLLoader.load(getClass().getResource("ManualWindow.fxml"));
     	anchorDetails.getChildren().setAll(pane);
+    	labelHeadline.setText("Manuelle Ablage");
 
     }
     
@@ -61,7 +63,8 @@ public class MainWindowController {
     	search.setDisable(true);
     	config.setDisable(false);
     	AnchorPane pane = FXMLLoader.load(getClass().getResource("SearchWindow.fxml"));
-    	anchorDetails.getChildren().setAll(pane);
+    	anchorDetails.getChildren().setAll(pane);    	
+    	labelHeadline.setText("Dokument suchen");
     	
     }
     
@@ -73,6 +76,7 @@ public class MainWindowController {
     	config.setDisable(true);
     	AnchorPane pane = FXMLLoader.load(getClass().getResource("ConfigWindow.fxml"));
     	anchorDetails.getChildren().setAll(pane);
+    	labelHeadline.setText("Einstellungen");
 
     }
     

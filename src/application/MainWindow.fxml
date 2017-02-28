@@ -20,11 +20,11 @@
                         <Font name="Arial Black" size="24.0" />
                      </font>
                   </Label>
-                  <JFXButton fx:id="manualStore" buttonType="RAISED" layoutX="6.0" layoutY="61.0" onAction="#handleManualButtonAction" prefHeight="40.0" prefWidth="150.0" ripplerFill="#eb6f6f" style="-fx-background-color: #bfbebe;" text="Manuelle Ablage" />
-                  <JFXButton fx:id="autoStore" buttonType="RAISED" disable="true" layoutX="6.0" layoutY="115.0" prefHeight="40.0" prefWidth="150.0" ripplerFill="#eb6f6f" style="-fx-background-color: #bfbebe;" text="Automatische Ablage" />
-                  <JFXButton fx:id="search" buttonType="RAISED" layoutX="6.0" layoutY="171.0" onAction="#handleSearchButton" prefHeight="40.0" prefWidth="150.0" ripplerFill="#eb6f6f" style="-fx-background-color: #bfbebe;" text="Dokument suchen" />
-                  <JFXButton fx:id="config" buttonType="RAISED" layoutX="6.0" layoutY="636.0" onAction="#handleConfigButtonAction" prefHeight="40.0" prefWidth="150.0" ripplerFill="#eb6f6f" style="-fx-background-color: #bfbebe;" text="Einstellungen" />
-                  <JFXButton fx:id="stop" buttonType="RAISED" layoutX="6.0" layoutY="693.0" onAction="#stopProgram" prefHeight="40.0" prefWidth="150.0" ripplerFill="#eb6f6f" style="-fx-background-color: #bfbebe;" text="Beenden" />
+                  <JFXButton fx:id="manualStore" buttonType="RAISED" layoutX="6.0" layoutY="61.0" onAction="#handleManualButtonAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #bfbebe;" text="Manuelle Ablage" />
+                  <JFXButton fx:id="autoStore" buttonType="RAISED" disable="true" layoutX="6.0" layoutY="115.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #bfbebe;" text="Automatische Ablage" />
+                  <JFXButton fx:id="search" buttonType="RAISED" layoutX="6.0" layoutY="171.0" onAction="#handleSearchButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #bfbebe;" text="Dokument suchen" />
+                  <JFXButton fx:id="config" buttonType="RAISED" layoutX="6.0" layoutY="636.0" onAction="#handleConfigButtonAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #bfbebe;" text="Einstellungen" />
+                  <JFXButton fx:id="stop" buttonType="RAISED" layoutX="6.0" layoutY="693.0" onAction="#stopProgram" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #bfbebe;" text="Beenden" />
                   <AnchorPane fx:id="anchorDetails" layoutX="166.0" layoutY="90.0" prefHeight="674.0" prefWidth="1108.0" />
                </children>
             </AnchorPane>
