@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
 <AnchorPane fx:id="anchorMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManualWindowController">
    <children>
@@ -19,11 +20,6 @@
       </Label>
       <Button fx:id="searchDoc" layoutX="211.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleSearchDoc" prefHeight="25.0" prefWidth="124.0" text="Durchsuchen..." />
       <Label fx:id="labelPath" layoutX="62.0" layoutY="59.0" prefHeight="25.0" prefWidth="273.0" text="Pfad des aktuellen Dokuments" />
-      <ImageView fx:id="imageActualDoc" fitHeight="570.0" fitWidth="402.0" layoutX="62.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-         <viewport>
-            <Rectangle2D height="690.0" width="500.0" />
-         </viewport>
-      </ImageView>
       <Label fx:id="labelKeywords" layoutX="748.0" layoutY="33.0" prefHeight="25.0" prefWidth="124.0" text="Schlüsselworte:">
          <font>
             <Font name="Arial Black" size="12.0" />
@@ -45,5 +41,11 @@
       <Separator layoutX="545.0" layoutY="10.0" orientation="VERTICAL" prefHeight="649.0" prefWidth="9.0" />
       <Button fx:id="zoomPlus" disable="true" layoutX="478.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom +" />
       <Button fx:id="zoomMinus" disable="true" layoutX="478.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom -" />
+      <WebView fx:id="webView" layoutX="62.0" layoutY="98.0" prefHeight="570.0" prefWidth="402.0" />
+      <ImageView fx:id="imageActualDoc" fitHeight="570.0" fitWidth="402.0" layoutX="62.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D height="690.0" width="500.0" />
+         </viewport>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 
@@ -28,6 +29,9 @@ public class ManualWindowController {
 
     @FXML
     private Label labelPath;
+    
+    @FXML
+    private WebView webView;
 
     @FXML
     private ImageView imageActualDoc;
@@ -60,19 +64,19 @@ public class ManualWindowController {
     private Button save;
 
     @FXML
-    private ComboBox<?> listKeywordOne;
+    private ComboBox<String> listKeywordOne;
 
     @FXML
-    private ComboBox<?> listKeywordTwo;
+    private ComboBox<String> listKeywordTwo;
 
     @FXML
-    private ComboBox<?> listKeywordThree;
+    private ComboBox<String> listKeywordThree;
 
     @FXML
-    private ComboBox<?> listKeywordFour;
+    private ComboBox<String> listKeywordFour;
 
     @FXML
-    private ComboBox<?> listKeywordFive;
+    private ComboBox<String> listKeywordFive;
 
     @FXML
     private Button zoomPlus;
