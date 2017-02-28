@@ -6,7 +6,6 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConfigWindowController">
    <children>
       <Label layoutX="332.0" layoutY="77.0" text="Suchlaufwerk:" />
@@ -18,7 +17,7 @@
       <Label layoutX="601.0" layoutY="204.0" text="(Laufwerk für Archivierung)" />
       <Label fx:id="labelPathLocation" layoutX="333.0" layoutY="203.0" prefHeight="19.0" prefWidth="260.0" style="-fx-border-color: black;" text="Pfad zum Laufwerk" textFill="#00000056" />
       <Label fx:id="labelStoreType" layoutX="333.0" layoutY="299.0" text="Speicherart:" />
-      <RadioButton fx:id="radioButtonStoreManual" layoutX="448.0" layoutY="299.0" mnemonicParsing="false" text="Manuell" />
+      <RadioButton fx:id="radioButtonStoreManual" layoutX="448.0" layoutY="299.0" mnemonicParsing="false" selected="true" text="Manuell" />
       <RadioButton fx:id="radioButtonStoreAuto" disable="true" layoutX="550.0" layoutY="299.0" mnemonicParsing="false" text="Automatisch" />
       <Label fx:id="labelScannerChoice" disable="true" layoutX="329.0" layoutY="394.0" text="Scanner wählen:" />
       <ChoiceBox fx:id="listScanner" disable="true" layoutX="442.0" layoutY="390.0" prefHeight="25.0" prefWidth="253.0" />
