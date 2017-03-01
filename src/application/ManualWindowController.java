@@ -1,7 +1,6 @@
 package application;
 
 import java.io.File;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -13,84 +12,81 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
+import helper.ImageHelper; // hs
 
 public class ManualWindowController {
 
-  public Main main;
-  
+  public Main              main;
+
   @FXML
-    private AnchorPane anchorMain;
-  
+  private AnchorPane       anchorMain;
+
   @FXML
-    private Label labelActualDoc;
+  private Label            labelActualDoc;
 
-    @FXML
-    private Button searchDoc;
+  @FXML
+  private Button           searchDoc;
 
-    @FXML
-    private Label labelPath;
-    
-    @FXML
-    private WebView webView;
+  @FXML
+  private Label            labelPath;
 
-    @FXML
-    private ImageView imageActualDoc;
+  @FXML
+  private WebView          webView;
 
-    @FXML
-    private Label labelKeywords;
+  @FXML
+  private ImageView        imageActualDoc;
 
-    @FXML
-    private DatePicker datePicker;
+  @FXML
+  private Label            labelKeywords;
 
-    @FXML
-    private Label labelDate;
+  @FXML
+  private DatePicker       datePicker;
 
-    @FXML
-    private Label labelKeywordOne;
+  @FXML
+  private Label            labelDate;
 
-    @FXML
-    private Label labelKeywordTwo;
+  @FXML
+  private Label            labelKeywordOne;
 
-    @FXML
-    private Label labelKeywordtThree;
+  @FXML
+  private Label            labelKeywordTwo;
 
-    @FXML
-    private Label labelKeywordFour;
+  @FXML
+  private Label            labelKeywordtThree;
 
-    @FXML
-    private Label labelKeywordFive;
+  @FXML
+  private Label            labelKeywordFour;
 
-    @FXML
-    private Button save;
+  @FXML
+  private Label            labelKeywordFive;
 
-    @FXML
-    private ComboBox<String> listKeywordOne;
+  @FXML
+  private Button           save;
 
-    @FXML
-    private ComboBox<String> listKeywordTwo;
+  @FXML
+  private ComboBox<String> listKeywordOne;
 
-    @FXML
-    private ComboBox<String> listKeywordThree;
+  @FXML
+  private ComboBox<String> listKeywordTwo;
 
-    @FXML
-    private ComboBox<String> listKeywordFour;
+  @FXML
+  private ComboBox<String> listKeywordThree;
 
-    @FXML
-    private ComboBox<String> listKeywordFive;
+  @FXML
+  private ComboBox<String> listKeywordFour;
 
-    @FXML
-    private Button zoomPlus;
+  @FXML
+  private ComboBox<String> listKeywordFive;
 
-    @FXML
-    private Button zoomMinus;
-    
-    @FXML
+  @FXML
+  private Button           zoomPlus;
+
+  @FXML
+  private Button           zoomMinus;
+
+  @FXML
   public void handleSearchDoc() {
-    /**
-     * Kk 170223 KK, CB 170224 Dialog zur Dateiauswahl aufrufen *erledigt
-     * Dateiname im Label anzeigen *erledigt ausgewählte Datei im Image
-     * anzeigen
-     */
+    
     // noch fest codiert, wenn wir eine Datenbankanbindung haben sollte
     // hier der Wert von config.rootDir
     File sourceDir = new File("C:");
@@ -99,39 +95,38 @@ public class ManualWindowController {
     // grundkonfiguration
     fileChooser.setTitle("Bitte gewünschte Datei auswählen");
     fileChooser.setInitialDirectory(sourceDir);
-    fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"),
-        new ExtensionFilter("Text Files", "*.txt", "*.pdf"), new ExtensionFilter("All Files", "*.*"));
+    fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Image Files",
+        "*.png", "*.jpg", "*.jpeg", "*.gif", "*.bmp"),
+        new ExtensionFilter("PDF Files", "*.pdf"));
 
     // das wird unsere Datei
     File myFile;
+    Image fxImage = null;
+    Boolean isPdf;
     // file wird gelesen
-    // myFile=fileChooser.showOpenDialog(main.getPrimarayStage());
     myFile = fileChooser.showOpenDialog(labelPath.getScene().getWindow());
     if (myFile != null) {
       // Path-angaben ausgeben
       labelPath.setText(myFile.getPath());
       labelPath.setVisible(true);
 
-      // Image anzeigen - hier bockt es noch
-//      System.out.println(myFile.toURI());
-//      System.out.println(myFile.toURI().toURL());
-//      System.out.println(myFile.toURI().toURL().toString());
+      // überprüfung ob die Datei ein Pdf ist
+      isPdf = myFile.getName().toString().endsWith(".pdf");
+
+      // ausgewählte Datei anzeigen
       try {
-        Image myImage = new Image(myFile.toURI().toURL().toExternalForm(),500.0,650.0,false, true);
-        System.out.println(myImage.heightProperty());
-        imageActualDoc.setImage(myImage);
-        //main.getPrimarayStage().show();
+        if (isPdf) {
+          fxImage = ImageHelper.convertImage(ImageHelper.createImage(myFile));
+          imageActualDoc.setImage(fxImage);
+        } else {
+          Image myImage = new Image(myFile.toURI().toURL().toExternalForm(),
+              595.0, 842.0, false, true);
+          System.out.println((myImage).heightProperty());
+          imageActualDoc.setImage(myImage);
+        }
       } catch (Exception e) {
         e.printStackTrace();
       }
-
-      // imageActualDoc.setImage(new Image(myFile.getAbsolutePath()));
-      // imageActualDoc.setVisible(true);
-      // neImage =imageActualDoc.getImage();
-      // labelPath.setText(" "+ neImage.getWidth());
-
     }
-    
-    }
-
+  }
 }

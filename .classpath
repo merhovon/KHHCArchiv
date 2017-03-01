@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="libs/sqlite-jdbc.jar"/>
 	<classpathentry kind="lib" path="libs/jfoenix.jar"/>
 	<classpathentry kind="lib" path="libs/jPDFViewer.jar"/>
+	<classpathentry kind="lib" path="libs/PDFRenderer-0.9.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
