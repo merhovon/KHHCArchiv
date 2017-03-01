@@ -47,7 +47,7 @@ public final class MainWindowController {
 
   /** 
    * @author kerstin
-   * @param main
+   * @param main main
    */
   void setMain(Main main) {
     this.main = main;
@@ -58,6 +58,8 @@ public final class MainWindowController {
   /**
    * Aufruf der manuellen Ablage
    * @author holger, helge
+   * @throws IOException IOException
+   * @param event event
    */
   @FXML
   private void handleManualButtonAction(ActionEvent event) throws IOException {
@@ -79,6 +81,8 @@ public final class MainWindowController {
   /**
    * Aufruf der Dokumentensuche  
    * @author holger, helge
+   * @throws IOException IOException
+   * @param event event
    */
   @FXML
   private void handleSearchButton(ActionEvent event) throws IOException {
@@ -101,6 +105,8 @@ public final class MainWindowController {
   /**
    * Aufruf der Einstellungen
    * @author holger, helge
+   * @throws IOException IOException
+   * @param event event
    */
   @FXML
   private void handleConfigButtonAction(ActionEvent event) throws IOException {

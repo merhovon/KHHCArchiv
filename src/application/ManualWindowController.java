@@ -1,6 +1,8 @@
 package application;
 
 import java.io.File;
+import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -9,11 +11,16 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
-import helper.ImageHelper; // hs
+import helper.PDFHelper;
 
+/**
+ * Controller für das Fenster zur manuellen Ablage
+ * 
+ * @author kerstin, helge, chris, holger
+ *
+ */
 public class ManualWindowController {
 
   public Main              main;
@@ -29,9 +36,6 @@ public class ManualWindowController {
 
   @FXML
   private Label            labelPath;
-
-  @FXML
-  private WebView          webView;
 
   @FXML
   private ImageView        imageActualDoc;
@@ -84,9 +88,24 @@ public class ManualWindowController {
   @FXML
   private Button           zoomMinus;
 
+  /**
+   * Suche des manuell abzulegenden Dokuments
+   * <br>
+   * Folgende Formate können gelesen und verarbeitet werden:
+   * <ul>
+   * <li> PNG,
+   * <li> JPG, JPEG,
+   * <li> GIF,
+   * <li> BMP,
+   * <li> PDF
+   * </li>
+   * </ul>
+   * 
+   * @author kerstin
+   */
   @FXML
   public void handleSearchDoc() {
-    
+
     // noch fest codiert, wenn wir eine Datenbankanbindung haben sollte
     // hier der Wert von config.rootDir
     File sourceDir = new File("C:");
@@ -116,7 +135,7 @@ public class ManualWindowController {
       // ausgewählte Datei anzeigen
       try {
         if (isPdf) {
-          fxImage = ImageHelper.convertImage(ImageHelper.createImage(myFile));
+          fxImage = PDFHelper.convertAwtToFx(PDFHelper.convertPdfToAwt(myFile));
           imageActualDoc.setImage(fxImage);
         } else {
           Image myImage = new Image(myFile.toURI().toURL().toExternalForm(),

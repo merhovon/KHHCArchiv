@@ -6,6 +6,12 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 
+/**
+ * Controller für das Fenster der Einstellungen
+ * 
+ * @author kerstin, helge, chris, holger
+ *
+ */
 public class ConfigWindowController {
 	
 	@FXML

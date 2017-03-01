@@ -2,6 +2,12 @@ package application;
 
 import java.sql.*;
 
+/**
+ * Testklasse zur Anbindung einer SQLite-Datenbank
+ * 
+ * @author chris
+ *
+ */
 public class Sqlitetest {
 	public static void main(String args[]) {
 		Connection c = null;

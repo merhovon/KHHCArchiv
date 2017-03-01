@@ -7,6 +7,12 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 
+/**
+ * Controller für das Fenster zur Dokumentensuche
+ * 
+ * @author kerstin, helge, chris, holger
+ *
+ */
 public class SearchWindowController {
 	
 	@FXML

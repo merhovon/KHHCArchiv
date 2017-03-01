@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -33,7 +34,10 @@
       <Button fx:id="zoomMinus" disable="true" layoutX="696.0" layoutY="632.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Zoom -" />
       <Button fx:id="print" disable="true" layoutX="898.0" layoutY="632.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Drucken" />
       <Button fx:id="send" disable="true" layoutX="969.0" layoutY="632.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Senden" />
-      <ImageView fx:id="choosenDoc" fitHeight="570.0" fitWidth="402.0" layoutX="627.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="choosenDoc" fitHeight="570.0" fitWidth="402.0" layoutX="627.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D height="842.0" width="595.0" />
+         </viewport></ImageView>
       <Button fx:id="newStore" disable="true" layoutX="802.0" layoutY="632.0" mnemonicParsing="false" text="Neue Ablage" />
    </children>
 </AnchorPane>
