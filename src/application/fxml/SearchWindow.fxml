@@ -16,17 +16,17 @@
       <Label layoutX="12.0" layoutY="42.0" text="Datum von:" />
       <DatePicker fx:id="dateFrom" layoutX="79.0" layoutY="38.0" onAction="#inputFromDate" prefWidth="180.0" promptText="tt.mm.jj" />
       <Label layoutX="294.0" layoutY="42.0" text="Datum bis:" />
-      <DatePicker fx:id="dateTill" disable="true" layoutX="355.0" layoutY="38.0" onAction="#inputTillDate" prefWidth="180.0" promptText="tt.mm.jj" />
+      <DatePicker fx:id="dateTill" editable="false" layoutX="355.0" layoutY="38.0" onAction="#inputTillDate" prefWidth="180.0" promptText="tt.mm.jj" />
       <Label layoutX="118.0" layoutY="122.0" text="Schlüsselwort 1:" />
-      <ChoiceBox fx:id="listSearchKeywordOne" layoutX="215.0" layoutY="113.0" prefHeight="35.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="listSearchKeywordOne" layoutX="215.0" layoutY="113.0" onInputMethodTextChanged="#inputKeywordOneTextChange" prefHeight="35.0" prefWidth="200.0" />
       <Label layoutX="118.0" layoutY="182.0" text="Schlüsselwort 2:" />
-      <ChoiceBox fx:id="listSearchKeywordTwo" layoutX="215.0" layoutY="173.0" prefHeight="35.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="listSearchKeywordTwo" layoutX="215.0" layoutY="173.0" onInputMethodTextChanged="#inputKeywordTwoTextChange" prefHeight="35.0" prefWidth="200.0" />
       <Label layoutX="118.0" layoutY="243.0" text="Schlüsselwort 3:" />
-      <ChoiceBox fx:id="listSearchKeywordThree" layoutX="215.0" layoutY="234.0" prefHeight="35.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="listSearchKeywordThree" layoutX="215.0" layoutY="234.0" onInputMethodTextChanged="#inputKeywordThreeTextChange" prefHeight="35.0" prefWidth="200.0" />
       <Label layoutX="118.0" layoutY="305.0" text="Schlüsselwort 4:" />
-      <ChoiceBox fx:id="listSearchKeywordFour" layoutX="215.0" layoutY="296.0" prefHeight="35.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="listSearchKeywordFour" layoutX="215.0" layoutY="296.0" onInputMethodTextChanged="#inputKeywordFourTextChange" prefHeight="35.0" prefWidth="200.0" />
       <Label layoutX="118.0" layoutY="364.0" text="Schlüsselwort 5:" />
-      <ChoiceBox fx:id="listSearchKeywordFive" layoutX="215.0" layoutY="355.0" prefHeight="35.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="listSearchKeywordFive" layoutX="215.0" layoutY="355.0" onInputMethodTextChanged="#inputKeywordFiveTextChange" prefHeight="35.0" prefWidth="200.0" />
       <Button fx:id="buttonSearch" disable="true" layoutX="223.0" layoutY="432.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Suchen" />
       <Label layoutX="67.0" layoutY="505.0" text="Ergebnis:" />
       <ListView fx:id="listResult" layoutX="123.0" layoutY="505.0" prefHeight="147.0" prefWidth="372.0" />

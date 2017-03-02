@@ -7,6 +7,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.InputMethodEvent;
 
 /**
  * Controller für das Fenster zur Dokumentensuche
@@ -15,70 +16,113 @@ import javafx.scene.image.ImageView;
  *
  */
 public class SearchWindowController {
-	
+
 	@FXML
-    private DatePicker dateFrom;
+	private DatePicker dateFrom;
 
-    @FXML
-    private DatePicker dateTill;
+	@FXML
+	private DatePicker dateTill;
 
-    @FXML
-    private ChoiceBox<String> listSearchKeywordOne;
+	@FXML
+	private ChoiceBox<String> listSearchKeywordOne;
 
-    @FXML
-    private ChoiceBox<String> listSearchKeywordTwo;
+	@FXML
+	private ChoiceBox<String> listSearchKeywordTwo;
 
-    @FXML
-    private ChoiceBox<String> listSearchKeywordThree;
+	@FXML
+	private ChoiceBox<String> listSearchKeywordThree;
 
-    @FXML
-    private ChoiceBox<String> listSearchKeywordFour;
+	@FXML
+	private ChoiceBox<String> listSearchKeywordFour;
 
-    @FXML
-    private ChoiceBox<String> listSearchKeywordFive;
+	@FXML
+	private ChoiceBox<String> listSearchKeywordFive;
 
-    @FXML
-    private Button buttonSearch;
+	@FXML
+	private Button buttonSearch;
 
-    @FXML
-    private ListView<String> listResult;
+	@FXML
+	private ListView<String> listResult;
 
-    @FXML
-    private Button zoomPlus;
+	@FXML
+	private Button zoomPlus;
 
-    @FXML
-    private Button zoomMinus;
+	@FXML
+	private Button zoomMinus;
 
-    @FXML
-    private Button print;
+	@FXML
+	private Button print;
 
-    @FXML
-    private Button send;
+	@FXML
+	private Button send;
 
-    @FXML
-    private ImageView choosenDoc;
-    
+	@FXML
+	private ImageView choosenDoc;
 
-    @FXML
-    private Button newStore;
-    
-    @FXML
-    void inputFromDate(ActionEvent event) {
-    	if (dateFrom.getValue() != null) {
-    		dateTill.setDisable(false);
-		}else {
-			dateTill.setDisable(true);
+	@FXML
+	private Button newStore;
+
+	@FXML
+	void inputFromDate(ActionEvent event) {
+		if (dateFrom.getValue() != null) {
+			buttonSearch.setDisable(false);
+		} else {
+			buttonSearch.setDisable(true);
 		}
-    }
+	}
 
-    @FXML
-    void inputTillDate(ActionEvent event) {
-    	if (dateTill.getValue() != null) {
-    		buttonSearch.setDisable(false);
-		}else {
+	@FXML
+	void inputTillDate(ActionEvent event) {
+		if (dateTill.getValue() != null) {
+			buttonSearch.setDisable(false);
+		} else {
+			buttonSearch.setDisable(true);
+		}
+	}
+
+	@FXML
+	void inputKeywordOneTextChange(InputMethodEvent event) {
+		if (listSearchKeywordOne.getValue().length() > 0) {
+			buttonSearch.setDisable(false);
+		} else {
 			buttonSearch.setDisable(true);
 		}
 
+	}
+	
+	@FXML
+    void inputKeywordTwoTextChange(InputMethodEvent event) {
+		if (listSearchKeywordTwo.getValue().length() > 0) {
+			buttonSearch.setDisable(false);
+		} else {
+			buttonSearch.setDisable(true);
+		}
     }
-
+	
+	@FXML
+    void inputKeywordThreeTextChange(InputMethodEvent event) {
+		if (listSearchKeywordThree.getValue().length() > 0) {
+			buttonSearch.setDisable(false);
+		} else {
+			buttonSearch.setDisable(true);
+		}
+    }
+	
+	@FXML
+    void inputKeywordFourTextChange(InputMethodEvent event) {
+		if (listSearchKeywordFour.getValue().length() > 0) {
+			buttonSearch.setDisable(false);
+		} else {
+			buttonSearch.setDisable(true);
+		}
+    }
+	
+	@FXML
+    void inputKeywordFiveTextChange(InputMethodEvent event) {
+		if (listSearchKeywordFive.getValue().length() > 0) {
+			buttonSearch.setDisable(false);
+		} else {
+			buttonSearch.setDisable(true);
+		}
+    }
 }
