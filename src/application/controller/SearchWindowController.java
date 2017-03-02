@@ -1,5 +1,6 @@
 package application.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -60,5 +61,24 @@ public class SearchWindowController {
 
     @FXML
     private Button newStore;
+    
+    @FXML
+    void inputFromDate(ActionEvent event) {
+    	if (dateFrom.getValue() != null) {
+    		dateTill.setDisable(false);
+		}else {
+			dateTill.setDisable(true);
+		}
+    }
+
+    @FXML
+    void inputTillDate(ActionEvent event) {
+    	if (dateTill.getValue() != null) {
+    		buttonSearch.setDisable(false);
+		}else {
+			buttonSearch.setDisable(true);
+		}
+
+    }
 
 }

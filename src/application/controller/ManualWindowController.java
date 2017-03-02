@@ -146,6 +146,8 @@ public class ManualWindowController {
 				e.printStackTrace();
 			}
 		}
+		zoomPlus.setDisable(false);
+		zoomMinus.setDisable(false);
 	}
 
 	/**
