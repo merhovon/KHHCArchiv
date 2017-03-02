@@ -1,5 +1,6 @@
 package application.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -14,5 +15,20 @@ public class NewKeywordWindowController {
 
     @FXML
     private Button popupNewKeywordSave;
+    
+    @FXML
+    void closePopup(ActionEvent event) {
+    	
+    }
+
+    @FXML
+    void inputNewKeyword(ActionEvent event) {
+
+    }
+
+    @FXML
+    void saveNewKeyword(ActionEvent event) {
+
+    }
 
 }
