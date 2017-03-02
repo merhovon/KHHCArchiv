@@ -175,12 +175,10 @@ public class ManualWindowController {
 
 	@FXML
 	void inputManualKeywordOne(ActionEvent event) {
-		if (listKeywordOne.getValue() != null) {
+		if (listKeywordOne.getValue().length() > 0) {
 			listKeywordOne.setDisable(false);
 			listKeywordTwo.setDisable(false);
 			save.setDisable(false);
-			System.out.println("list one if");
-			System.out.println(listKeywordOne.getValue());
 		} else {
 			System.out.println("list one else");
 			listKeywordTwo.setValue(null);
@@ -201,8 +199,6 @@ public class ManualWindowController {
 			listKeywordOne.setDisable(false);
 			listKeywordTwo.setDisable(false);
 			save.setDisable(false);
-			System.out.println("list one if change");
-			System.out.println(listKeywordOne.getValue());
 		} else {
 			System.out.println("list one else change");
 			listKeywordTwo.setValue(null);
@@ -219,7 +215,7 @@ public class ManualWindowController {
 
 	@FXML
 	void inputManualKeywordTwo(ActionEvent event) {
-		if (listKeywordTwo.getValue() != null) {
+		if (listKeywordTwo.getValue().length() > 0) {
 			listKeywordOne.setDisable(false);
 			listKeywordTwo.setDisable(false);
 			listKeywordThree.setDisable(false);
@@ -235,7 +231,7 @@ public class ManualWindowController {
 
 	@FXML
 	void inputManualKeywordThree(ActionEvent event) {
-		if (listKeywordThree.getValue() != null) {
+		if (listKeywordThree.getValue().length() > 0) {
 			listKeywordOne.setDisable(false);
 			listKeywordTwo.setDisable(false);
 			listKeywordThree.setDisable(false);
@@ -250,7 +246,7 @@ public class ManualWindowController {
 
 	@FXML
 	void inputManualKeywordFour(ActionEvent event) {
-		if (listKeywordFour.getValue() != null) {
+		if (listKeywordFour.getValue().length() > 0) {
 			listKeywordOne.setDisable(false);
 			listKeywordTwo.setDisable(false);
 			listKeywordThree.setDisable(false);
