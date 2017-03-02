@@ -61,6 +61,11 @@ public class SearchWindowController {
 
 	@FXML
 	private Button newStore;
+	
+	/**
+	 * @author helge
+	 * @param event
+	 */
 
 	@FXML
 	void inputFromDate(ActionEvent event) {
