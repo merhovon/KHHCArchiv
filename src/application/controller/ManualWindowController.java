@@ -180,7 +180,6 @@ public class ManualWindowController {
 			listKeywordTwo.setDisable(false);
 			save.setDisable(false);
 		} else {
-			System.out.println("list one else");
 			listKeywordTwo.setValue(null);
 			listKeywordThree.setValue(null);
 			listKeywordFour.setValue(null);
@@ -200,7 +199,6 @@ public class ManualWindowController {
 			listKeywordTwo.setDisable(false);
 			save.setDisable(false);
 		} else {
-			System.out.println("list one else change");
 			listKeywordTwo.setValue(null);
 			listKeywordThree.setValue(null);
 			listKeywordFour.setValue(null);
