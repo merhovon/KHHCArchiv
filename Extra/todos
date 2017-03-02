@@ -2,3 +2,5 @@
 2. kk 170222: Beim Vergrößern/verkleinern des Fensters wird der Split-Balken etwas verschoben. Noch unschön
 3. cb 170234: encoding kontrollieren - alle auf utf-8 einstellen!! erledigt
 4. HM 170224: wie gehen die Daten der Datenbank auf dem Computer auf das Handy?
+5. 02.03.17:  neue/weitere klassen für die persistierung erstellen, combobox-inhalte sperren, wenn inhalte gelöscht wurden 
+				(abhängigkeit der reihenfolge beachten), javadoc für neu erstellte methoden, usw.... 
