@@ -1,9 +1,10 @@
-package application;
+package application.controller;
 
 import java.io.IOException;
 
 import com.jfoenix.controls.JFXButton;
 
+import application.Main;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,7 +50,7 @@ public final class MainWindowController {
    * @author kerstin
    * @param main main
    */
-  void setMain(Main main) {
+  public void setMain(Main main) {
     this.main = main;
     // Ueberschrift wird auf den Wert Archivierung (Version 1.0) gesetzt
     labelHeadline.setText("Archivierung (Version 1.0)");
@@ -72,7 +73,7 @@ public final class MainWindowController {
     search.setDisable(false);
     config.setDisable(false);
     AnchorPane pane = FXMLLoader
-        .load(getClass().getResource("ManualWindow.fxml"));
+        .load(getClass().getResource("../fxml/ManualWindow.fxml"));
     anchorDetails.getChildren().setAll(pane);
     labelHeadline.setText("Manuelle Ablage");
 
@@ -95,7 +96,7 @@ public final class MainWindowController {
     search.setDisable(true);
     config.setDisable(false);
     AnchorPane pane = FXMLLoader
-        .load(getClass().getResource("SearchWindow.fxml"));
+        .load(getClass().getResource("../fxml/SearchWindow.fxml"));
     anchorDetails.getChildren().setAll(pane);
     labelHeadline.setText("Dokument suchen");
 
@@ -119,7 +120,7 @@ public final class MainWindowController {
     search.setDisable(false);
     config.setDisable(true);
     AnchorPane pane = FXMLLoader
-        .load(getClass().getResource("ConfigWindow.fxml"));
+        .load(getClass().getResource("../fxml/ConfigWindow.fxml"));
     anchorDetails.getChildren().setAll(pane);
     labelHeadline.setText("Einstellungen");
 

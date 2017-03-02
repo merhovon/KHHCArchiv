@@ -1,7 +1,8 @@
-package application;
+package application.controller;
 
 import java.io.File;
 
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -147,6 +148,11 @@ public class ManualWindowController {
 		}
 	}
 
+	/**
+	 * hier kommt rein was die methode macht....
+	 * @author helge
+	 * @param event
+	 */
 	@FXML
 	void inputManualDate(ActionEvent event) {
 

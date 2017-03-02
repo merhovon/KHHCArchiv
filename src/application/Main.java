@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 
+import application.controller.MainWindowController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -38,7 +39,7 @@ public class Main extends Application {
   public void mainWindow() {
     try {
       FXMLLoader loader = new FXMLLoader(
-          Main.class.getResource("MainWindow.fxml"));
+          Main.class.getResource("fxml/MainWindow.fxml"));
       // es muss hier der äußerste Container geladen werden hier SplitPane
       AnchorPane pane = loader.load(); // der Container in dem alle Elemente
                                        // liegen
