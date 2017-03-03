@@ -9,6 +9,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
@@ -20,130 +21,155 @@ import javafx.scene.layout.AnchorPane;
  */
 public final class MainWindowController {
 
-  public Main        main;
+	public Main main;
 
-  @FXML
-  private AnchorPane anchorMainMain;
+	@FXML
+	private AnchorPane anchorMainMain;
 
-  @FXML
-  private JFXButton  manualStore;
+	@FXML
+	private JFXButton manualStore;
 
-  @FXML
-  private JFXButton  autoStore;
+	@FXML
+	private JFXButton autoStore;
 
-  @FXML
-  private JFXButton  search;
+	@FXML
+	private JFXButton search;
 
-  @FXML
-  private JFXButton  config;
+	@FXML
+	private JFXButton config;
 
-  @FXML
-  private JFXButton  stop;
+	@FXML
+	private JFXButton stop;
 
-  @FXML
-  private AnchorPane anchorDetails;
+	@FXML
+	private AnchorPane anchorDetails;
 
-  @FXML
-  private Label      labelHeadline;
+	@FXML
+	private Label labelHeadline;
 
-  /** 
-   * @author kerstin
-   * @param main main
-   */
-  public void setMain(Main main) {
-    this.main = main;
-    // Ueberschrift wird auf den Wert Archivierung (Version 1.0) gesetzt
-    labelHeadline.setText("Archivierung (Version 1.0)");
-  }
+	/**
+	 * @author kerstin
+	 * @param main
+	 *            main
+	 */
+	public void setMain(Main main) {
+		this.main = main;
 
-  /**
-   * Aufruf der manuellen Ablage
-   * @author holger, helge
-   * @throws IOException IOException
-   * @param event event
-   */
-  @FXML
-  private void handleManualButtonAction(ActionEvent event) throws IOException {
-    /*
-     * Auswählbare Buttons werden enabled, nicht auswählbare Buttons werden
-     * disabled. Aufruf der Folgeseite über die Zuweisung an pane. Ueberschrift
-     * wird auf den Wert "Manuelle Ablage" gesetzt
-     */
-    manualStore.setDisable(true);
-    search.setDisable(false);
-    config.setDisable(false);
-    AnchorPane pane = FXMLLoader
-        .load(getClass().getResource("../fxml/ManualWindow.fxml"));
-    anchorDetails.getChildren().setAll(pane);
-    labelHeadline.setText("Manuelle Ablage");
+		// Ueberschrift wird auf den Wert Archivierung (Version 1.0) gesetzt
+		labelHeadline.setText("Archivierung (Version 1.0)");
+	}
 
-  }
+	/**
+	 * Aufruf der manuellen Ablage
+	 * 
+	 * @author holger, helge
+	 * @throws IOException
+	 *             IOException
+	 * @param event
+	 *            event
+	 */
+	@FXML
+	private void handleManualButtonAction(ActionEvent event) throws IOException {
+		/*
+		 * Auswählbare Buttons werden enabled, nicht auswählbare Buttons werden
+		 * disabled. Aufruf der Folgeseite über die Zuweisung an pane.
+		 * Ueberschrift wird auf den Wert "Manuelle Ablage" gesetzt
+		 */
+		manualStore.setDisable(true);
+		search.setDisable(false);
+		config.setDisable(false);
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("../fxml/ManualWindow.fxml"));
 
-  /**
-   * Aufruf der Dokumentensuche  
-   * @author holger, helge
-   * @throws IOException IOException
-   * @param event event
-   */
-  @FXML
-  private void handleSearchButton(ActionEvent event) throws IOException {
-    /*
-     * Auswählbare Buttons werden enabled, nicht auswählbare Buttons werden
-     * disabled. Aufruf der Folgeseite über die Zuweisung an pane. Ueberschrift
-     * wird auf den Wert "Dokument suchen" gesetzt
-     */
-    manualStore.setDisable(false);
-    search.setDisable(true);
-    config.setDisable(false);
-    AnchorPane pane = FXMLLoader
-        .load(getClass().getResource("../fxml/SearchWindow.fxml"));
-    anchorDetails.getChildren().setAll(pane);
-    labelHeadline.setText("Dokument suchen");
+		anchorDetails.getChildren().setAll(pane);
+		labelHeadline.setText("Manuelle Ablage");
 
-  }
+	}
 
-  
-  /**
-   * Aufruf der Einstellungen
-   * @author holger, helge
-   * @throws IOException IOException
-   * @param event event
-   */
-  @FXML
-  private void handleConfigButtonAction(ActionEvent event) throws IOException {
-    /*
-     * Auswählbare Buttons werden enabled, nicht auswählbare Buttons werden
-     * disabled. Aufruf der Folgeseite über die Zuweisung an pane. Ueberschrift
-     * wird auf den Wert "Einstellungen" gesetzt
-     */
-    manualStore.setDisable(false);
-    search.setDisable(false);
-    config.setDisable(true);
-    AnchorPane pane = FXMLLoader
-        .load(getClass().getResource("../fxml/ConfigWindow.fxml"));
-    anchorDetails.getChildren().setAll(pane);
-    labelHeadline.setText("Einstellungen");
+	/**
+	 * Aufruf der Dokumentensuche
+	 * 
+	 * @author holger, helge
+	 * @throws IOException
+	 *             IOException
+	 * @param event
+	 *            event
+	 */
+	@FXML
+	private void handleSearchButton(ActionEvent event) throws IOException {
+		/*
+		 * Auswählbare Buttons werden enabled, nicht auswählbare Buttons werden
+		 * disabled. Aufruf der Folgeseite über die Zuweisung an pane.
+		 * Ueberschrift wird auf den Wert "Dokument suchen" gesetzt
+		 */
+		manualStore.setDisable(false);
+		search.setDisable(true);
+		config.setDisable(false);
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("../fxml/SearchWindow.fxml"));
+		anchorDetails.getChildren().setAll(pane);
+		labelHeadline.setText("Dokument suchen");
 
-  }
-   
-  /**
-   * Beenden der Anwendung
-   * @author kerstin
-   */
-  @FXML
-  private void stopProgram() {
-    /*
-     * KK 170222 Programm wird beendet Lifecycle einer fx-Anwendung ist:
-     * init - start - (warten auf Platform.exit) - stop init und stop sind
-     * in Application bereits codiert (leer) und müssen nicht
-     * überschrieben
-     * werden start muss auscodiert werden Platform.exit() erlaubt noch
-     * das
-     * Aufrufen von stop System.exit() wäre eine Alternative !!es gibt
-     * dann
-     * aber keine Möglichkeit auf das Aufrufen von stop()!!
-     */
-    Platform.exit();
-  }
+	}
+
+	/**
+	 * Aufruf der Einstellungen
+	 * 
+	 * @author holger, helge
+	 * @throws IOException
+	 *             IOException
+	 * @param event
+	 *            event
+	 */
+	@FXML
+	private void handleConfigButtonAction(ActionEvent event) throws IOException {
+		/*
+		 * Auswählbare Buttons werden enabled, nicht auswählbare Buttons werden
+		 * disabled. Aufruf der Folgeseite über die Zuweisung an pane.
+		 * Ueberschrift wird auf den Wert "Einstellungen" gesetzt
+		 */
+		// ConfigWindowController myController=new ConfigWindowController();
+		manualStore.setDisable(false);
+		search.setDisable(false);
+		config.setDisable(true);
+		AnchorPane configPane = FXMLLoader.load(getClass().getResource("../fxml/ConfigWindow.fxml"));
+		for (Node n : configPane.getChildren()) {
+			System.out.println("config " + n.getId() + " " + n.getClass());
+			if (n.getId() != null) {
+				if (n.getId().equals("labelPathSourceLocation")) {
+					Label lb= (Label) n;
+					lb.setText(main.getMyConfig().getSourceDir());
+					n=lb;
+				} 
+				if (n.getId().equals("labelPathDestinationLocation")) {
+					Label lb= (Label) n;
+					lb.setText(main.getMyConfig().getDestinationDir());
+					n=lb;
+				} 
+				//Manual noch ausgespart
+
+			}
+		}
+		anchorDetails.getChildren().setAll(configPane);
+
+		labelHeadline.setText("Einstellungen");
+
+	}
+
+	/**
+	 * Beenden der Anwendung
+	 * 
+	 * @author kerstin
+	 */
+	@FXML
+	private void stopProgram() {
+		/*
+		 * KK 170222 Programm wird beendet Lifecycle einer fx-Anwendung ist:
+		 * init - start - (warten auf Platform.exit) - stop init und stop sind
+		 * in Application bereits codiert (leer) und müssen nicht überschrieben
+		 * werden start muss auscodiert werden Platform.exit() erlaubt noch das
+		 * Aufrufen von stop System.exit() wäre eine Alternative !!es gibt dann
+		 * aber keine Möglichkeit auf das Aufrufen von stop()!!
+		 */
+		Platform.exit();
+	}
 
 }

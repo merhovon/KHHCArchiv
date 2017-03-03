@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import persistence.ConfigTable;
 
 /**
  * Hauptfenster der Anwendung mit Weiterleitungen zur
@@ -25,14 +26,23 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
   private Stage primarayStage; // ist das klassische "Fenster" unsere Bühne
-
+  private ConfigTable myConfig;
   public Stage getPrimarayStage() {
     return primarayStage;
   }
 
-  @Override
+  public ConfigTable getMyConfig() {
+	return myConfig;
+}
+
+public void setMyConfig(ConfigTable myConfig) {
+	this.myConfig = myConfig;
+}
+
+@Override
   public void start(Stage primaryStage) {
-    this.primarayStage = primaryStage;
+	  myConfig= new ConfigTable();
+	  this.primarayStage = primaryStage;
     mainWindow();
   }
 
@@ -43,11 +53,6 @@ public class Main extends Application {
       // es muss hier der äußerste Container geladen werden hier SplitPane
       AnchorPane pane = loader.load(); // der Container in dem alle Elemente
                                        // liegen
-
-      // Standardgröße des Fensters - kann hier raus
-      // da die Werte in der fxml festgelegt sind
-      primarayStage.setMinHeight(600.00);
-      primarayStage.setMinWidth(1400.00);
 
       // Was wird hier gespielt - die erste Szene = das Fenster im Urzustand
       Scene scene = new Scene(pane);
