@@ -132,7 +132,6 @@ public final class MainWindowController {
 		config.setDisable(true);
 		AnchorPane configPane = FXMLLoader.load(getClass().getResource("../fxml/ConfigWindow.fxml"));
 		for (Node n : configPane.getChildren()) {
-			System.out.println("config " + n.getId() + " " + n.getClass());
 			if (n.getId() != null) {
 				if (n.getId().equals("labelPathSourceLocation")) {
 					Label lb= (Label) n;
