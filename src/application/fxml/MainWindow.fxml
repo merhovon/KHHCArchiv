@@ -15,7 +15,6 @@
         <content>
           <AnchorPane id="anchorChild" minHeight="0.0" minWidth="0.0" prefHeight="768.0" prefWidth="1291.0" stylesheets="@../css/anchor.css">
                <children>
-                  <Separator layoutX="160.0" layoutY="15.0" orientation="VERTICAL" prefHeight="738.0" prefWidth="5.0" />
                   <Separator layoutX="175.0" layoutY="80.0" prefHeight="10.0" prefWidth="1087.0" />
                   <Label fx:id="labelHeadline" alignment="CENTER" contentDisplay="CENTER" layoutX="171.0" layoutY="6.0" prefHeight="73.0" prefWidth="415.0" text="Archivierung V 1.0" textAlignment="CENTER" textFill="#023537">
                      <font>
@@ -28,9 +27,9 @@
                      </viewport>
                   </ImageView>
                   <JFXButton fx:id="stop" buttonType="RAISED" layoutX="6.0" layoutY="693.0" onAction="#stopProgram" prefHeight="40.0" prefWidth="150.0" stylesheets="@../css/button.css" text="Beenden" />
-                  <JFXButton fx:id="manualStore" buttonType="RAISED" layoutX="6.0" layoutY="61.0" onAction="#handleManualButtonAction" prefHeight="40.0" prefWidth="150.0" stylesheets="@../css/button.css" text="Manuelle Ablage" textFill="#023537" />
-                  <JFXButton fx:id="autoStore" buttonType="RAISED" disable="true" layoutX="6.0" layoutY="115.0" prefHeight="40.0" prefWidth="150.0" stylesheets="@../css/button.css" text="Automatische Ablage" />
-                  <JFXButton fx:id="search" buttonType="RAISED" layoutX="6.0" layoutY="171.0" onAction="#handleSearchButton" prefHeight="40.0" prefWidth="150.0" stylesheets="@../css/button.css" text="Dokument suchen" />
+                  <JFXButton fx:id="manualStore" buttonType="RAISED" layoutX="6.0" layoutY="95.0" onAction="#handleManualButtonAction" prefHeight="40.0" prefWidth="150.0" stylesheets="@../css/button.css" text="Manuelle Ablage" textFill="#023537" />
+                  <JFXButton fx:id="autoStore" buttonType="RAISED" disable="true" layoutX="6.0" layoutY="149.0" prefHeight="40.0" prefWidth="150.0" stylesheets="@../css/button.css" text="Automatische Ablage" />
+                  <JFXButton fx:id="search" buttonType="RAISED" layoutX="6.0" layoutY="205.0" onAction="#handleSearchButton" prefHeight="40.0" prefWidth="150.0" stylesheets="@../css/button.css" text="Dokument suchen" />
                   <JFXButton fx:id="config" buttonType="RAISED" layoutX="6.0" layoutY="636.0" onAction="#handleConfigButtonAction" prefHeight="40.0" prefWidth="150.0" stylesheets="@../css/button.css" text="Einstellungen" />
                   <AnchorPane fx:id="anchorDetails" layoutX="166.0" layoutY="90.0" prefHeight="674.0" prefWidth="1108.0" stylesheets="@../css/anchor.css" />
                </children>
