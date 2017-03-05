@@ -130,26 +130,21 @@ public final class MainWindowController {
 		manualStore.setDisable(false);
 		search.setDisable(false);
 		config.setDisable(true);
-		AnchorPane configPane = FXMLLoader.load(getClass().getResource("../fxml/ConfigWindow.fxml"));
-		for (Node n : configPane.getChildren()) {
-			if (n.getId() != null) {
-				if (n.getId().equals("labelPathSourceLocation")) {
-					Label lb= (Label) n;
-					lb.setText(main.getMyConfig().getSourceDir());
-					n=lb;
-				} 
-				if (n.getId().equals("labelPathDestinationLocation")) {
-					Label lb= (Label) n;
-					lb.setText(main.getMyConfig().getDestinationDir());
-					n=lb;
-				} 
-				//Manual noch ausgespart
-
-			}
-		}
-		anchorDetails.getChildren().setAll(configPane);
-
-		labelHeadline.setText("Einstellungen");
+                try {
+                      FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/ConfigWindow.fxml"));
+                              //root node auf das neue Fenster legen
+			      Parent Elternknoten = (Parent) fxmlLoader.load();
+                              // Bühne erstellen
+			      Stage Buehne = new Stage();
+			     //Eine Szenerie auf die Bühne stellen
+                              Buehne.setScene(new Scene(Elternknoten));
+			     //Fenstertitel setzten
+                              Buehne.setTitle("Einstellungen");
+                              //show() > die Bühne sichtbar machen.
+			      Buehne.show();
+                      } catch(Exception e) {
+                         e.printStackTrace();
+                        }
 
 	}
 
